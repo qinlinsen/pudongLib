@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <style>
+        p{
+            font-weight: bold;
+        }
+        div.ou{
+            color:red;
+            border: 1px solid red;
+            width: 300px;
+            height: 300px;
+        }
+        div.oux{
+            color:blue;
+            border: 1px solid blue;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+
+<body>
+<div id="mydiv" class="ou" sixi="soedoie" style="transform: rotate(30deg)"
+     onclick="show()">123</div>
+    <a name="1">1</a>
+    <a name="2">2</a>
+    <a name="3">3</a>
+    <a href="1"><p>4</p></a>
+    <a href="2">5</a>
+    <a href="3">6</a>
+    <img nam="myImage">
+    <img name="myImage2">
+    <p id="p3">bold</p>
+
+    <p id="p">p element</p>
+    <p id="p2">world</p>
+    <div id="element" style="border-radius: 25px;border: 1px solid red">
+        <span id="span">hello</span>
+    </div>
+    <input typ="radio" value="eoweio">
+    <p id="testp">hello world</p>
+    <script>
+        var node = document.getElementById('element');
+        var p = node.appendChild(document.getElementById('p'));
+        node.removeChild(document.getElementById('p'));
+        node.insertBefore(document.getElementById('p2'),document.getElementById('span'));
+        node.replaceChild(document.getElementById('p3'),document.getElementById('span'));
+        var ownEle=node.parentNode.parentNode;
+        console.log("nodeName="+ownEle.nodeName+" nodeValue="+ownEle.nodeValue+
+        ' parentNode='+ownEle.parentNode+ 'ownerElement='+ownEle.ownerDocument);
+
+
+
+        const documentElement = document.documentElement;
+        console.log(documentElement==document.childNodes.item(1));
+        console.log(document.doctype==document.childNodes[0]);
+        document.title='min';
+        console.log("url="+document.URL);
+        document.writeln('domain='+document.domain)
+        console.log(document.getElementById('oweoo'));
+        const nodeValue = document.getElementsByTagName('p').item(0).innerText;
+        console.log('nodeValue='+nodeValue);
+        const namedItem = document.getElementsByTagName('img').namedItem('myImage');
+        console.log(namedItem);
+       /*for(let elem of  document.getElementsByTagName('*')){
+           console.log(elem);
+       }*/
+
+
+        for(let elem of document.links){
+            console.log(elem.innerHTML);
+        }
+
+        console.log(document.implementation);
+        document.writeln("ewoeoi");
+        document.close();
+        document.writeln(" ew");
+
+        console.log("********************");
+        console.log(document.getElementById('mydiv').tagName);
+        if(Object.is(document.getElementById('mydiv').tagName.toLowerCase()),'div'){
+            console.log('equal');
+        }
+        document.getElementById('mydiv').className='oux';
+        document.getElementById('mydiv').title='owe8i';
+       console.log(document.getElementById('mydiv').getAttribute('sixi')) ;
+       console.log("**********************");
+       console.log(document.getElementById('mydiv').getAttribute('onclick'));
+       console.log("888888888888888888888888888888888888888888888");
+       console.log(document.getElementById('mydiv').onclick);
+       function show() {
+           console.log('show');
+       }
+        document.getElementById('mydiv').newa='newa';
+       console.log(document.getElementById('mydiv').getAttribute('newa'));
+        document.getElementById('mydiv').removeAttribute('class');
+       console.log( document.getElementById('mydiv').attributes.getNamedItem('sixi').nodeValue);
+        console.log( document.getElementById('mydiv').attributes['sixi'].nodeValue);
+        for(let elem of document.getElementById('mydiv').attributes){
+            console.log(elem);
+        }
+
+//        const createElement = document.createElement("<a name=\"1\">1</a>");
+        /*createElement.id='createElement';
+        createElement.style='ou';
+        createElement.style.border='1px solid red';
+        createElement.innerHTML='<p>test test test</p>'*/
+//        document.body.appendChild(createElement);
+
+       let creE= document.createElement('div');
+       let textC=document.createTextNode('oracle 数据库');
+      let app= creE.appendChild(textC);
+       document.body.appendChild(app);
+    </script>
+
+</body>
+</html>
